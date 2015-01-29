@@ -1,0 +1,9 @@
+{
+  "destinationFolder": "dist",
+  "exportFileName": "moment-business",
+  "entryFileName": "moment-business",
+  "mochaGlobals": [
+    "stub", "spy", "expect",
+    "moment", "containedPeriodicValues"
+  ]
+}

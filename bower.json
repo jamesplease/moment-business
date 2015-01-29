@@ -1,0 +1,31 @@
+{
+  "name": "moment-business",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jmeas/moment-business",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "Methods to work with week days and weekends in moment.",
+  "main": "dist/moment-business.js",
+  "keywords": [
+    "moment",
+    "momentjs",
+    "moment.js",
+    "business",
+    "workday",
+    "weekday",
+    "workweek",
+    "saturday",
+    "sunday",
+    "weekend",
+    "weekends"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
