@@ -4,7 +4,7 @@
   } else if (typeof exports !== 'undefined') {
     var moment = require('moment');
     var containedPeriodicValues = require('contained-periodic-values');
-    module.exports = factory();
+    factory();
   } else {
     factory(root.moment, root.containedPeriodicValues);
   }
