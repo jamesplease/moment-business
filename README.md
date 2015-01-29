@@ -5,7 +5,7 @@
 [![Dependency Status](https://david-dm.org/jmeas/moment-business.svg)](https://david-dm.org/jmeas/moment-business) 
 [![devDependency Status](https://david-dm.org/jmeas/moment-business/dev-status.svg)](https://david-dm.org/jmeas/moment-business#info=devDependencies)
 
-Utilities for working with week days and work days in Moment. It assumes a Western workweek, so weekends are
+Utilities for working with week days and work days in Moment. It assumes a Western workweek, wherein weekends are
 Saturday and Sunday.
 
 ### Motivation
@@ -30,4 +30,4 @@ Calculate the number of work days between the moment and `otherMoment`. Work day
 
 ##### `weekendDays( otherMoment )`
 
-Calculate the number of work days between the moment and `otherMoment`. Weekend days are Saturday and Sunday.
+Calculate the number of weekend days between the moment and `otherMoment`. Weekend days are Saturday and Sunday.
