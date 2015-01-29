@@ -5,7 +5,6 @@ moment.fn.weekDays = function(start) {
   var startDay = start.day();
   var totalDays = Math.abs(this.diff(start, 'days'));
 
-  // Calculate the nearest Saturday and Sunday to our start day
   var containedSundays = containedPeriodicValues(startDay, totalDays + startDay, 0, 7);
   var containedSaturdays = containedPeriodicValues(startDay, totalDays + startDay, 6, 7);
 
