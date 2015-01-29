@@ -52,10 +52,11 @@
     "run-sequence": "^1.0.2",
     "sinon": "^1.12.2",
     "sinon-chai": "^2.6.0",
+    "underscore": "^1.7.0",
     "vinyl-source-stream": "^1.0.0"
   },
   "dependencies": {
-    "contained-periodic-values": "^0.0.1",
+    "contained-periodic-values": "^0.0.2",
     "moment": "^2.9.0"
   }
 }
