@@ -6,7 +6,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-01', DATE_FORMAT);
     });
 
-    _.each(sundayFixtures, function(fixture, description) {
+    _.each(fixtures.sunday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -20,7 +20,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-02', DATE_FORMAT);
     });
 
-    _.each(mondayFixtures, function(fixture, description) {
+    _.each(fixtures.monday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -34,7 +34,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-03', DATE_FORMAT);
     });
 
-    _.each(tuesdayFixtures, function(fixture, description) {
+    _.each(fixtures.tuesday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -48,7 +48,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-04', DATE_FORMAT);
     });
 
-    _.each(wednesdayFixtures, function(fixture, description) {
+    _.each(fixtures.wednesday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -62,7 +62,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-05', DATE_FORMAT);
     });
 
-    _.each(thursdayFixtures, function(fixture, description) {
+    _.each(fixtures.thursday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -76,7 +76,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-06', DATE_FORMAT);
     });
 
-    _.each(fridayFixtures, function(fixture, description) {
+    _.each(fixtures.friday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);
@@ -90,7 +90,7 @@ describe('Weekend day count', function() {
       this.start = moment.utc('2015-03-07', DATE_FORMAT);
     });
 
-    _.each(saturdayFixtures, function(fixture, description) {
+    _.each(fixtures.saturday, function(fixture, description) {
       it('should calculate the correct number of workdays between every two dates; ' + description, function() {
         this.endMoment = moment(this.start).utc().add(fixture.duration, 'days');
         this.weekendDays = this.endMoment.weekendDays(this.start);

@@ -66,6 +66,7 @@
   "globals": {
     "moment": true,
     "_": true,
+    "fixtures": true,
     "sundayFixtures": true,
     "saturdayFixtures": true,
     "mondayFixtures": true,
