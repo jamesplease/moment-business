@@ -1,6 +1,6 @@
 {
   "name": "moment-business",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Methods to work with week days and weekends in moment.",
   "main": "dist/moment-business.js",
   "scripts": {
