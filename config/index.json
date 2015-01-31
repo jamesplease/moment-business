@@ -5,7 +5,6 @@
   "mochaGlobals": [
     "stub", "spy", "expect", "moment",
     "containedPeriodicValues",
-    "skippedPeriodicValues",
     "fixtures"
   ]
 }

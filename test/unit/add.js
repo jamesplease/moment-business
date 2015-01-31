@@ -7,7 +7,7 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.sunday, function(solution, addition) {
-      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition + '.', function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkDays(addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
@@ -139,7 +139,7 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.saturday, function(solution, addition) {
-      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition + '.', function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkDays(addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
