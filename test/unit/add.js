@@ -7,9 +7,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.sunday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.sunday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
@@ -21,9 +29,18 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.monday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        console.log(this.start.format('MM-DD'), this.solution.format('MM-DD'), this.calculated.format('MM-DD'));
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.monday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         console.log(this.start.format('MM-DD'), this.solution.format('MM-DD'), this.calculated.format('MM-DD'));
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
@@ -36,9 +53,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.tuesday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.tuesday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
@@ -50,9 +75,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.wednesday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.wednesday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
@@ -64,9 +97,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.thursday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.thursday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
@@ -78,9 +119,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.friday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.friday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
@@ -92,9 +141,17 @@ describe('Adding weekdays', function() {
     });
 
     _.each(fixtures.add.saturday, function(solution, addition) {
-      it('should calculate the correct number of workdays between every two dates; ' + addition, function() {
+      it('when adding, should calculate the correct number of workdays between every two dates; ' + addition, function() {
         this.solution = moment(solution, DATE_FORMAT);
         this.calculated = moment(this.start).addWorkdays(addition);
+        expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
+      });
+    }, this);
+
+    _.each(fixtures.add.saturday, function(solution, addition) {
+      it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, function() {
+        this.solution = moment(solution, DATE_FORMAT);
+        this.calculated = moment(this.start).subtractWorkdays(-addition);
         expect(this.calculated.isSame(this.solution, 'day')).to.be.true;
       });
     }, this);
