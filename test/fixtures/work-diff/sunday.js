@@ -1,6 +1,6 @@
-// This is data that starts at Sunday...and counts up
+global.fixtures = global.fixtures || {};
 
-module.exports = {
+global.fixtures.sunday = {
   
   // Sunday; same day
   sameDay: {

@@ -22,6 +22,11 @@ There are alternative libraries for these methods, but this one supplies constan
 others tend to rely on loops. Loops are easier for a human to write, but they are much slower for a
 computer to process.
 
+##### FAQ
+
+The above is actually a lie. The add and subtract methods use a looping algorithm right now, but I'm working on the
+constant time solution.
+
 ### API
 
 ##### `workDays( otherMoment )`
@@ -31,3 +36,11 @@ Calculate the number of work days between the moment and `otherMoment`. Work day
 ##### `weekendDays( otherMoment )`
 
 Calculate the number of weekend days between the moment and `otherMoment`. Weekend days are Saturday and Sunday.
+
+##### `addWorkDays( amount )`
+
+Add work days to a moment, modifying the original moment. Returns the moment.
+
+##### `subtractWorkDays( amount )`
+
+Subtract work days from the moment, modifying the original moment. Returns the moment.

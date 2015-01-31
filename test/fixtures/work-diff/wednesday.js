@@ -1,4 +1,6 @@
-module.exports = {
+global.fixtures = global.fixtures || {};
+
+global.fixtures.wednesday = {
   
   // Wednesday; same day
   sameDay: {

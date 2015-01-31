@@ -3,7 +3,9 @@
   "exportFileName": "moment-business",
   "entryFileName": "moment-business",
   "mochaGlobals": [
-    "stub", "spy", "expect",
-    "moment", "containedPeriodicValues"
+    "stub", "spy", "expect", "moment",
+    "containedPeriodicValues",
+    "skippedPeriodicValues",
+    "fixtures"
   ]
 }
