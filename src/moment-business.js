@@ -1,6 +1,5 @@
 import moment from 'moment';
 import containedPeriodicValues from 'contained-periodic-values';
-import skippedPeriodicValues from 'skipped-periodic-values';
 
 moment.fn.weekDays = function(start) {
   var startDay = start.day();
@@ -11,14 +10,34 @@ moment.fn.weekDays = function(start) {
 };
 
 moment.fn.weekendDays = function(start) {
-  // Total days - week days
   return Math.abs(this.diff(start, 'days')) - this.weekDays(start);
 };
 
 moment.fn.addWorkdays = function(count) {
-  var today = this.day();
-  var skippedSundays = skippedPeriodicValues(today, count, 0, 7);
-  var skippedSaturdays = skippedPeriodicValues(today, count, 6, 7);
-  console.log('skipped', skippedSundays, skippedSaturdays);
-  return this.add(count + skippedSundays + skippedSaturdays, 'days');
+  if (count === 0) { return this; }
+
+  var positive = count > 0;
+
+  // Support negative and positive values
+  var methodName = positive ? 'add' : 'subtract';
+  count = Math.abs(count);
+
+  var destination = moment(this);
+  var i = 0;
+  while(i < count) {
+    destination[methodName](1, 'days');
+    if (positive && destination.day() > 1) {
+      i += 1;
+    } else if (!positive && destination.isoWeekday() < 6) {
+      i += 1;
+    }
+  }
+
+  this.add(destination.diff(this, 'days'), 'days');
+  return this;
+};
+
+// The inverse of adding
+moment.fn.subtractWorkdays = function(count) {
+  return this.addWorkdays(-count);
 };
