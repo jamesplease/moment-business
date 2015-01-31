@@ -16,20 +16,33 @@ moment.fn.weekendDays = function(start) {
 moment.fn.addWorkDays = function(count) {
   if (count === 0) { return this; }
 
-  var positive = count > 0;
+  var sign = Math.sign(count);
+  var day = this.day();
+  var absIncrement = Math.abs(count);
 
-  // Support negative and positive values
-  var methodName = positive ? 'add' : 'subtract';
-  count = Math.abs(count);
+  var days = 0;
 
-  var destination = moment(this);
-  var i = 0;
-  while(i < count) {
-    destination[methodName](1, 'days');
-    i += positive ? destination.day() > 1 : destination.isoWeekday() < 6;
+  if (day === 0 && sign === -1) {
+    days = 1;
+  } else if (day === 6 && sign === 1) {
+    days = 1;
   }
 
-  this.add(destination.diff(this, 'days'), 'days');
+  // Add padding for weekends.
+  var paddedAbsIncrement = absIncrement;
+  if (day !== 0 && day !== 6 && sign > 0) {
+    paddedAbsIncrement += day;
+  } else if (day !== 0 && day !== 6 && sign < 0) {
+    paddedAbsIncrement += 6 - day;
+  }
+  var weekendsInbetween =
+    Math.max(Math.floor(paddedAbsIncrement / 5) - 1, 0) +
+    (paddedAbsIncrement > 5 && paddedAbsIncrement % 5 > 0 ? 1 : 0);
+
+  // Add the increment and number of weekends.
+  days += absIncrement + weekendsInbetween * 2;
+
+  this.add(sign * days, 'days');
   return this;
 };
 
