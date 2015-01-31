@@ -18,9 +18,8 @@ This library supplies you with those missing tools.
 
 ### Why this library?
 
-There are alternative libraries for these methods, but this one supplies constant-time algorithms, whereas
-others tend to rely on loops. Loops are easier for a human to write, but they are much slower for a
-computer to process.
+There are alternative libraries for these methods, but this one uses constant-time algorithms, and not loops.
+Loops are easier for a human to write, but they are slower for a computer to resolve.
 
 ### API
 
