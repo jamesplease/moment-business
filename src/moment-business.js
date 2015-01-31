@@ -13,10 +13,18 @@ moment.fn.weekendDays = function(start) {
   return Math.abs(this.diff(start, 'days')) - this.weekDays(start);
 };
 
+function signPolyfill(x) {
+  x = +x;
+  if (x === 0 || isNaN(x)) {
+    return x;
+  }
+  return x > 0 ? 1 : -1;
+}
+
 moment.fn.addWorkDays = function(count) {
   if (count === 0) { return this; }
 
-  var sign = Math.sign(count);
+  var sign = signPolyfill(count);
   var day = this.day();
   var absIncrement = Math.abs(count);
 
