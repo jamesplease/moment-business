@@ -26,11 +26,7 @@ moment.fn.addWorkDays = function(count) {
   var i = 0;
   while(i < count) {
     destination[methodName](1, 'days');
-    if (positive && destination.day() > 1) {
-      i += 1;
-    } else if (!positive && destination.isoWeekday() < 6) {
-      i += 1;
-    }
+    i += positive ? destination.day() > 1 : destination.isoWeekday() < 6;
   }
 
   this.add(destination.diff(this, 'days'), 'days');
