@@ -13,7 +13,7 @@ moment.fn.weekendDays = function(start) {
   return Math.abs(this.diff(start, 'days')) - this.weekDays(start);
 };
 
-moment.fn.addWorkdays = function(count) {
+moment.fn.addWorkDays = function(count) {
   if (count === 0) { return this; }
 
   var positive = count > 0;
@@ -38,6 +38,6 @@ moment.fn.addWorkdays = function(count) {
 };
 
 // The inverse of adding
-moment.fn.subtractWorkdays = function(count) {
-  return this.addWorkdays(-count);
+moment.fn.subtractWorkDays = function(count) {
+  return this.addWorkDays(-count);
 };

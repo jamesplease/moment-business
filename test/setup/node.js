@@ -9,6 +9,7 @@ require('../fixtures/work-diff/thursday');
 require('../fixtures/work-diff/friday');
 require('../fixtures/work-diff/saturday');
 require('../fixtures/modify/add');
+require('../fixtures/modify/subtract');
 
 global.moment = require('moment');
 require('../../src/' + config.entryFileName);
