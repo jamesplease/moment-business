@@ -1,23 +1,7 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["moment", "contained-periodic-values"], factory);
-  } else if (typeof exports !== "undefined") {
-    var moment = require("moment");
-    var containedPeriodicValues = require("contained-periodic-values");
-    factory(moment, containedPeriodicValues);
-  } else {
-    factory(root.moment, root.containedPeriodicValues);
-  }
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined" ? factory(require("moment"), require("contained-periodic-values")) : typeof define === "function" && define.amd ? define(["moment", "contained-periodic-values"], factory) : factory(global.moment, global.containedPeriodicValues);
 })(this, function (moment, containedPeriodicValues) {
   "use strict";
-
-  var signPolyfill = function (x) {
-    x = +x;
-    if (x === 0 || isNaN(x)) {
-      return x;
-    }
-    return x > 0 ? 1 : -1;
-  };
 
   moment.fn.weekDays = function (start) {
     var startDay = start.day();
@@ -30,6 +14,14 @@
   moment.fn.weekendDays = function (start) {
     return Math.abs(this.diff(start, "days")) - this.weekDays(start);
   };
+
+  function signPolyfill(x) {
+    x = +x;
+    if (x === 0 || isNaN(x)) {
+      return x;
+    }
+    return x > 0 ? 1 : -1;
+  }
 
   moment.fn.addWorkDays = function (count) {
     if (count === 0) {
@@ -69,4 +61,4 @@
     return this.addWorkDays(-count);
   };
 });
-//# sourceMappingURL=moment-business.js.map
+//# sourceMappingURL=./moment-business.js.map
