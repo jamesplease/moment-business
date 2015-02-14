@@ -38,3 +38,11 @@ Add work days to a moment, modifying the original moment. Returns the moment.
 ##### `subtractWorkDays( amount )`
 
 Subtract work days from the moment, modifying the original moment. Returns the moment.
+
+##### `isWorkDay()`
+
+Whether or not the Moment occurs between Monday and Friday.
+
+##### `isWekendDay()`
+
+Whether or not the Moment occurs on Saturday or Sunday.
