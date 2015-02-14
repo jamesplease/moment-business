@@ -27,5 +27,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "contained-periodic-values.js": "^1.0.0",
+    "moment": "^2.9.0",
+    "skipped-periodic-values.js": "^1.0.0"
+  }
 }
