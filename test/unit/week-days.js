@@ -1,3 +1,5 @@
+import '../../src/moment-business';
+
 var DATE_FORMAT = 'YYYY-MM-DD';
 
 describe('Week day count', function() {
