@@ -56,7 +56,7 @@ gulp.task('lint-src', function() {
 
 // Lint our test code
 gulp.task('lint-test', function() {
-  return gulp.src(['test/unit/**/*.js'])
+  return gulp.src(['test/**/*.js'])
     .pipe($.plumber())
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
