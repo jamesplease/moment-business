@@ -4,6 +4,17 @@ var DATE_FORMAT = 'YYYY-MM-DD';
 var start, calculated;
 
 describe('Adding weekdays', () => {
+  describe('when the count is not a number', () => {
+    beforeEach(() => {
+      start = moment.utc('2015-03-01', DATE_FORMAT);
+    });
+
+    it('should return the same moment', () => {
+      var clone = moment(start);
+      expect(start.addWorkDays({}).isSame(clone)).to.be.true;
+    });
+  });
+
   describe('starting at Sunday', () => {
     beforeEach(() => {
       start = moment.utc('2015-03-01', DATE_FORMAT);
