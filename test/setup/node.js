@@ -9,7 +9,7 @@ require('../fixtures/work-diff/saturday');
 require('../fixtures/modify/add');
 require('../fixtures/modify/subtract');
 
-require("6to5/register");
+require('6to5/register');
 global.moment = require('moment');
 global.chai = require('chai');
 global.sinon = require('sinon');
