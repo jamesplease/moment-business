@@ -1,0 +1,48 @@
+{
+  "esnext": true,
+  "validateQuoteMarks": "'",
+  "validateParameterSeparator": ", ",
+  "requireSpacesInForStatement": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireSpaceBetweenArguments": true,
+  "requireSpaceBeforeKeywords": [
+    "else",
+    "while",
+    "catch"
+  ],
+  "requireSpaceBeforeBlockStatements": true,
+  "requireSpaceBeforeBinaryOperators": true,
+  "requireSpaceAfterLineComment": true,
+  "requireOperatorBeforeLineBreak": true,
+  "requireDotNotation": true,
+  "requireCurlyBraces": true,
+  "requireCommaBeforeLineBreak": true,
+  "requireCapitalizedComments": true,
+  "disallowYodaConditions": true,
+  "disallowTrailingWhitespace": true,
+  "disallowSpacesInsideObjectBrackets": {
+    "allExcept": ["}"]
+  },
+  "disallowSpacesInsideArrayBrackets": {
+    "allExcept": [ "[", "]" ]
+  },
+  "disallowSpacesInFunctionDeclaration": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  },
+  "disallowSpacesInCallExpression": true,
+  "disallowSpaceBeforePostfixUnaryOperators": true,
+  "disallowSpaceAfterPrefixUnaryOperators": true,
+  "disallowSpaceAfterObjectKeys": true,
+  "disallowQuotedKeysInObjects": true,
+  "disallowPaddingNewlinesInBlocks": true,
+  "disallowOperatorBeforeLineBreak": ["."],
+  "disallowNewlineBeforeBlockStatements": true,
+  "disallowMultipleVarDecl": "exceptUndefined",
+  "disallowMultipleLineStrings": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowMixedSpacesAndTabs": true,
+  "disallowEmptyBlocks": true
+}

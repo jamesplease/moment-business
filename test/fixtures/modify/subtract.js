@@ -2,7 +2,7 @@ global.fixtures = global.fixtures || {};
 
 var subtract = global.fixtures.subtract = {};
 
-// The values are the amount subtracted. The 
+// The values are the amount subtracted. The
 // keys are the resulting day
 subtract.sunday = [
   '2015-04-05',

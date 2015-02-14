@@ -1,7 +1,7 @@
 global.fixtures = global.fixtures || {};
 
 global.fixtures.friday = {
-  
+
   // Friday; same day
   sameDay: {
     duration: 0,
@@ -44,7 +44,7 @@ global.fixtures.friday = {
     weekendDays: 2
   },
 
-  // ...skipping ahead to the next interesting
+  // Skipping ahead to the next interesting
   // datapoint
 
   // Friday => Friday (1 week, 5 days)
@@ -82,7 +82,7 @@ global.fixtures.friday = {
     weekendDays: 4
   },
 
-  // ...skipping ahead to the next interesting
+  // Skipping ahead to the next interesting
   // datapoint
 
   // Friday => Friday (2 weeks, 5 days)
