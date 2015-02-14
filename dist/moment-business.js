@@ -60,5 +60,16 @@
   moment.fn.subtractWorkDays = function (count) {
     return this.addWorkDays(-count);
   };
+
+  // Returns a Boolean representing
+  // whether or not the moment is Mon-Fri
+  moment.fn.isWorkDay = function () {
+    return this.isoWeekday() < 6;
+  };
+
+  // The inverse of the above method
+  moment.fn.isWeekendDay = function () {
+    return this.isoWeekday() > 5;
+  };
 });
 //# sourceMappingURL=./moment-business.js.map
