@@ -23,7 +23,7 @@ Loops are easier for a human to write, but they are slower for a computer to res
 
 ### API
 
-##### `workDays( otherMoment )`
+##### `weekDays( otherMoment )`
 
 Calculate the number of work days between the moment and `otherMoment`. Work days are Monday through Friday.
 
