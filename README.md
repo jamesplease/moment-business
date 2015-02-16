@@ -18,8 +18,8 @@ This library supplies you with those missing tools.
 
 ### Why this library?
 
-There are alternative libraries for these methods, but this one uses constant-time algorithms, and not loops.
-Loops are easier for a human to write, but they are slower for a computer to resolve.
+There are alternative libraries for these methods, but this one uses constant-time algorithms, not loops.
+Loops are easier for a human to write but are much slower for a computer to resolve.
 
 ### API
 
@@ -39,10 +39,10 @@ Add work days to a moment, modifying the original moment. Returns the moment.
 
 Subtract work days from the moment, modifying the original moment. Returns the moment.
 
-##### `isWorkDay()`
+##### `isWeekDay()`
 
-Whether or not the Moment occurs between Monday and Friday.
+Whether or not the Moment is a week day (Monday - Friday).
 
-##### `isWekendDay()`
+##### `isWeekendDay()`
 
 Whether or not the Moment occurs on Saturday or Sunday.

@@ -58,7 +58,7 @@ moment.fn.subtractWorkDays = function(count) {
 
 // Returns a Boolean representing
 // whether or not the moment is Mon-Fri
-moment.fn.isWorkDay = function() {
+moment.fn.isWeekDay = function() {
   return this.isoWeekday() < 6;
 };
 
