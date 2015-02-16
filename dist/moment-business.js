@@ -20,7 +20,7 @@
     return x > 0 ? 1 : -1;
   }
 
-  moment.fn.addWorkDays = function (count) {
+  moment.fn.addWeekDays = function (count) {
     if (count === 0 || isNaN(count)) {
       return this;
     }
@@ -54,13 +54,13 @@
   };
 
   // The inverse of adding
-  moment.fn.subtractWorkDays = function (count) {
-    return this.addWorkDays(-count);
+  moment.fn.subtractWeekDays = function (count) {
+    return this.addWeekDays(-count);
   };
 
   // Returns a Boolean representing
   // whether or not the moment is Mon-Fri
-  moment.fn.isWorkDay = function () {
+  moment.fn.isWeekDay = function () {
     return this.isoWeekday() < 6;
   };
 
