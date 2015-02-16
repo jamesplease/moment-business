@@ -5,8 +5,8 @@
 [![Dependency Status](https://david-dm.org/jmeas/moment-business.svg)](https://david-dm.org/jmeas/moment-business) 
 [![devDependency Status](https://david-dm.org/jmeas/moment-business/dev-status.svg)](https://david-dm.org/jmeas/moment-business#info=devDependencies)
 
-Utilities for working with week days and work days in Moment. It assumes a Western workweek, wherein weekends are
-Saturday and Sunday.
+Utilities for working with week days and weekend days in Moment. It assumes a Western
+workweek, in which weekends are Saturday and Sunday.
 
 ### Motivation
 
@@ -19,25 +19,25 @@ This library supplies you with those missing tools.
 ### Why this library?
 
 There are alternative libraries for these methods, but this one uses constant-time algorithms, not loops.
-Loops are easier for a human to write but are much slower for a computer to resolve.
+Loops are easier for a human to write, but are much slower for a computer to resolve.
 
 ### API
 
 ##### `weekDays( otherMoment )`
 
-Calculate the number of work days between the moment and `otherMoment`. Work days are Monday through Friday.
+Calculate the number of week days between the moment and `otherMoment`. Week days are Monday through Friday.
 
 ##### `weekendDays( otherMoment )`
 
 Calculate the number of weekend days between the moment and `otherMoment`. Weekend days are Saturday and Sunday.
 
-##### `addWorkDays( amount )`
+##### `addWeekDays( amount )`
 
-Add work days to a moment, modifying the original moment. Returns the moment.
+Add week days to a moment, modifying the original moment. Returns the moment.
 
-##### `subtractWorkDays( amount )`
+##### `subtractWeekDays( amount )`
 
-Subtract work days from the moment, modifying the original moment. Returns the moment.
+Subtract week days from the moment, modifying the original moment. Returns the moment.
 
 ##### `isWeekDay()`
 

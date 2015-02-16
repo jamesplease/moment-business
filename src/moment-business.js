@@ -18,7 +18,7 @@ function determineSign(x) {
   return x > 0 ? 1 : -1;
 }
 
-moment.fn.addWorkDays = function(count) {
+moment.fn.addWeekDays = function(count) {
   if (count === 0 || isNaN(count)) { return this; }
 
   var sign = determineSign(count);
@@ -52,8 +52,8 @@ moment.fn.addWorkDays = function(count) {
 };
 
 // The inverse of adding
-moment.fn.subtractWorkDays = function(count) {
-  return this.addWorkDays(-count);
+moment.fn.subtractWeekDays = function(count) {
+  return this.addWeekDays(-count);
 };
 
 // Returns a Boolean representing
