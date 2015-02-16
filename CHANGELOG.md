@@ -1,3 +1,11 @@
+### [2.0.0](https://github.com/jmeas/moment-business/releases/tag/v2.0.0)
+
+The API is now more consistent.
+
+- Rename `isWorkDay` to `isWeekDay`
+- Rename `addWorkDays` to `addWeekDays`
+- Rename `subtractWorkDays` to `subtractWeekDays`
+
 ### [1.1.1](https://github.com/jmeas/moment-business/releases/tag/v1.1.1)
 
 - Add dependencies to `bower.json`
