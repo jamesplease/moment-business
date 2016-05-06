@@ -1,4 +1,5 @@
-import '../../src/moment-business';
+import 'moment';
+import business from '../../src/moment-business';
 
 var DATE_FORMAT = 'YYYY-MM-DD';
 var start, endMoment, weekendDays;
@@ -12,7 +13,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.sunday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -26,7 +27,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.monday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -40,7 +41,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.tuesday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -54,7 +55,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.wednesday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -68,7 +69,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.thursday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -82,7 +83,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.friday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
@@ -96,7 +97,7 @@ describe('Weekend day count', () => {
     _.each(fixtures.saturday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekendDays = endMoment.weekendDays(start);
+        weekendDays = business.weekendDays(start, endMoment);
         expect(weekendDays).to.equal(fixture.weekendDays);
       });
     });
