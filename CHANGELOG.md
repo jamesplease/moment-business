@@ -1,3 +1,12 @@
+### [3.0.0](https://github.com/jmeas/moment-business/releases/tag/v3.0.0)
+
+- The functions in this library now accept moments as arguments rather than
+  being attached to the Moment prototype.
+- The behavior is `weekDays` and `weekendDays` now aligns more closely with
+  `Moment.prototype.diff`. If the `endMoment` passed in comes before
+  `startMoment`, then the result will be negative.
+- Better docs!
+
 ### [2.0.0](https://github.com/jmeas/moment-business/releases/tag/v2.0.0)
 
 The API is now more consistent.
