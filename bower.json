@@ -1,6 +1,6 @@
 {
   "name": "moment-business",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "homepage": "https://github.com/jmeas/moment-business",
   "authors": [
     "Jmeas <jellyes2@gmail.com>"
@@ -30,7 +30,6 @@
   ],
   "dependencies": {
     "contained-periodic-values.js": "^1.0.0",
-    "moment": "^2.9.0",
     "skipped-periodic-values.js": "^1.0.0"
   }
 }

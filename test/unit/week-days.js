@@ -1,4 +1,5 @@
-import '../../src/moment-business';
+import 'moment';
+import business from '../../src/moment-business';
 
 var DATE_FORMAT = 'YYYY-MM-DD';
 var start, endMoment, weekDays;
@@ -12,8 +13,14 @@ describe('Week day count', () => {
     _.each(fixtures.sunday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -26,8 +33,14 @@ describe('Week day count', () => {
     _.each(fixtures.monday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -40,8 +53,14 @@ describe('Week day count', () => {
     _.each(fixtures.tuesday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -54,8 +73,14 @@ describe('Week day count', () => {
     _.each(fixtures.wednesday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -68,8 +93,14 @@ describe('Week day count', () => {
     _.each(fixtures.thursday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -82,8 +113,14 @@ describe('Week day count', () => {
     _.each(fixtures.friday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });
@@ -96,8 +133,14 @@ describe('Week day count', () => {
     _.each(fixtures.saturday, (fixture, description) => {
       it('should calculate the correct number of workdays between every two dates; ' + description, () => {
         endMoment = moment(start).utc().add(fixture.duration, 'days');
-        weekDays = endMoment.weekDays(start);
+        weekDays = business.weekDays(start, endMoment);
         expect(weekDays).to.equal(fixture.weekDays);
+      });
+
+      it('should calculate the correct number of workdays between every two dates in reverse; ' + description, () => {
+        endMoment = moment(start).utc().add(fixture.duration, 'days');
+        weekDays = business.weekDays(endMoment, start);
+        expect(weekDays).to.equal(-fixture.weekDays);
       });
     });
   });

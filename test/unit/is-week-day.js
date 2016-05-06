@@ -1,4 +1,5 @@
-import '../../src/moment-business';
+import 'moment';
+import business from '../../src/moment-business';
 
 var DATE_FORMAT = 'YYYY-MM-DD';
 var day;
@@ -10,7 +11,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekDay()).to.be.true;
+      expect(business.isWeekDay(day)).to.be.true;
     });
   });
 
@@ -20,7 +21,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekDay()).to.be.true;
+      expect(business.isWeekDay(day)).to.be.true;
     });
   });
 
@@ -30,7 +31,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekDay()).to.be.true;
+      expect(business.isWeekDay(day)).to.be.true;
     });
   });
 
@@ -40,7 +41,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekDay()).to.be.true;
+      expect(business.isWeekDay(day)).to.be.true;
     });
   });
 
@@ -50,7 +51,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekDay()).to.be.true;
+      expect(business.isWeekDay(day)).to.be.true;
     });
   });
 
@@ -60,7 +61,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekDay()).to.be.false;
+      expect(business.isWeekDay(day)).to.be.false;
     });
   });
 
@@ -70,7 +71,7 @@ describe('isWeekDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekDay()).to.be.false;
+      expect(business.isWeekDay(day)).to.be.false;
     });
   });
 });

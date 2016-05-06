@@ -1,16 +1,17 @@
-import '../../src/moment-business';
+import 'moment';
+import business from '../../src/moment-business';
 
 var DATE_FORMAT = 'YYYY-MM-DD';
 var day;
 
-describe('isWorkDay', () => {
+describe('isWeekendDay', () => {
   describe('Monday', () => {
     beforeEach(() => {
       day = moment('2015-03-02', DATE_FORMAT);
     });
 
     it('should be false', () => {
-      expect(day.isWeekendDay()).to.be.false;
+      expect(business.isWeekendDay(day)).to.be.false;
     });
   });
 
@@ -20,7 +21,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekendDay()).to.be.false;
+      expect(business.isWeekendDay(day)).to.be.false;
     });
   });
 
@@ -30,7 +31,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekendDay()).to.be.false;
+      expect(business.isWeekendDay(day)).to.be.false;
     });
   });
 
@@ -40,7 +41,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekendDay()).to.be.false;
+      expect(business.isWeekendDay(day)).to.be.false;
     });
   });
 
@@ -50,7 +51,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be false', () => {
-      expect(day.isWeekendDay()).to.be.false;
+      expect(business.isWeekendDay(day)).to.be.false;
     });
   });
 
@@ -60,7 +61,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekendDay()).to.be.true;
+      expect(business.isWeekendDay(day)).to.be.true;
     });
   });
 
@@ -70,7 +71,7 @@ describe('isWorkDay', () => {
     });
 
     it('should be true', () => {
-      expect(day.isWeekendDay()).to.be.true;
+      expect(business.isWeekendDay(day)).to.be.true;
     });
   });
 });
