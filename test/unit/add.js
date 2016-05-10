@@ -27,9 +27,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.sunday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -49,9 +47,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.monday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -71,9 +67,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.tuesday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -93,9 +87,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.wednesday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -115,9 +107,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.thursday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -137,9 +127,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.friday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
@@ -159,9 +147,7 @@ describe('Adding weekdays', () => {
         calculated = business.addWeekDays(moment(start), addition);
         expect(calculated.isSame(solution, 'day')).to.be.true;
       });
-    });
 
-    _.each(fixtures.add.saturday, (solution, addition) => {
       it('when subtracting negative, should calculate the correct number of workdays between every two dates; ' + addition, () => {
         solution = moment(solution, DATE_FORMAT);
         calculated = business.subtractWeekDays(moment(start), -addition);
