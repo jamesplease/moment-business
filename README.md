@@ -8,6 +8,9 @@
 Utilities for working with week days and weekend days in Moment. It assumes a Western
 workweek, in which weekends are Saturday and Sunday.
 
+*Looking for a vanilla JS version of this library? Check out
+[bizniz.js](https://github.com/jmeas/bizniz.js)*
+
 ### Motivation
 
 [Moment](http://momentjs.com/) is an indispensable tool for working with dates in Javascript, but it
