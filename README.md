@@ -24,6 +24,24 @@ This library supplies you with those missing tools.
 There are alternative libraries for these methods, but this one uses constant-time algorithms, not loops.
 Loops are easier for a human to write, but are much slower for a computer to resolve.
 
+### Getting Started
+
+Install this library through npm.
+
+```js
+npm install moment-business
+```
+
+Next, import it into your project.
+
+```js
+import business from 'moment-business';
+
+business.isWeekDay(someMoment);
+```
+
+*Note: this library is also available through Bower.*
+
 ### API
 
 ##### `weekDays( startMoment, endMoment )`
