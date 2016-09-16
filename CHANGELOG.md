@@ -1,3 +1,10 @@
+### [3.0.1](https://github.com/jmeas/moment-business/releases/tag/v3.0.1)
+
+- Fix the name of the library in non-module loader browser environments.
+  Previously, the library was attached as `window.none`. Now it is available
+  under `window.momentBusiness`. Note that this issue does not affect users
+  building with ES2015/CommonJS/AMD module bundlers.
+
 ### [3.0.0](https://github.com/jmeas/moment-business/releases/tag/v3.0.0)
 
 - The functions in this library now accept moments as arguments rather than
