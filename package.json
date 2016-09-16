@@ -67,7 +67,7 @@
   },
   "to5BoilerplateOptions": {
     "entryFileName": "moment-business",
-    "exportVarName": "none",
+    "exportVarName": "momentBusiness",
     "mochaGlobals": [
       "stub",
       "spy",
