@@ -14,8 +14,7 @@ workweek, in which weekends are Saturday and Sunday.
 ### Motivation
 
 [Moment](http://momentjs.com/) is an indispensable tool for working with dates in Javascript, but it
-doesn't supply methods for working with week days or weekend days (at least,
-[not yet](https://github.com/moment/moment/issues/1947)).
+doesn't ([and won't](https://github.com/moment/moment/issues/1947#issuecomment-269811073)) supply methods for working with week days or weekend days.
 
 This library supplies you with those missing tools.
 
