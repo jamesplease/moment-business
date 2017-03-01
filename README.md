@@ -41,6 +41,32 @@ business.isWeekDay(someMoment);
 
 *Note: this library is also available through Bower.*
 
+### Guides
+
+#### Dates and times
+
+This library only works when you pass in dates without times. What this means is
+that you should not use Moment objects built from dates such as
+"2016-07-25T13:43:00.000+00:00". If you have datetimes that you wish to use with
+this library, then you must:
+
+1. use Moment's `startOf()` method to set this to be the start of the day
+2. manually strip out the information after the `T` before creating your Moment
+  object
+
+If you do not do this, then this library will not return the results that you
+expect.
+
+#### Intervals
+
+This library uses inclusive start, exclusive end intervals. What this means is
+that the start day is included in the result, but the end day is not.
+
+This is consistent with how Moment's intervals work.
+
+For example, the total number of days between March 1st, 2020 and March 2nd,
+2020 will be computed as 1.
+
 ### API
 
 ##### `weekDays( startMoment, endMoment )`
